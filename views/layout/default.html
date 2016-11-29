@@ -5,6 +5,7 @@
     <title>insights_intake</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.7/css/materialize.min.css">
+  <!--  <link rel="stylesheet" href="./public/css/styles.css">  -->
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <link rel="stylesheet" type="text/css" href="css/styles.css">
   </head>
@@ -14,8 +15,34 @@
         <a href="#" class="brand-logo">Users</a>
       </div>
     </nav>
-    <div class="containers">
+    <div class="container">
       {{{content}}}
+      <section>
+        <h3>Add/Update User</h3>
+
+        <form id="form" action="/add_user">
+          If updating, enter user name to update? eg. 'Will Savage'?:<br>
+          <input type="text" name="update" value="New"><br>
+          First name:<br>
+          <input type="text" name="firstname" value="Mickey"><br>
+          Last name:<br>
+          <input type="text" name="surname" value="Mouse"><br>
+          Type:<br>
+          <input type="text" name="type" value="Enter position eg: FAC9"><br>
+          Age:<br>
+          <input type="text" name="age" value="enter age"><br>
+          <input type="submit" value="Submit">
+        </form>
+
+        <h3>DELETE user</h3>
+        <form id="form" action="/delete_user">
+          Full name:<br>
+          <input type="text" name="update" value="Will Savage"><br>
+          To delete, enter 'DELETE':<br>
+          <input type="text" name="delete" value="..."><br>
+          <input type="submit" value="Submit">
+        </form>
+
     </div>
     <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.7/js/materialize.min.js"></script>

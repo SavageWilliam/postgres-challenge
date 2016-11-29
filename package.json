@@ -2,12 +2,12 @@
   "name": "postgres-challenge",
   "version": "1.0.0",
   "description": "An app to explore using postgres with Node.js",
-  "main": "index.js",
+  "main": "server.js",
   "scripts": {
     "dev": "nodemon server",
     "lint": "eslint './**/*.js'",
     "precommit": "npm run lint",
-    "start": "node server"
+    "start": "nodemon server.js"
   },
   "repository": {
     "type": "git",
@@ -25,7 +25,8 @@
     "eslint-plugin-import": "^2.2.0",
     "eslint-plugin-jsx-a11y": "^2.2.3",
     "eslint-plugin-react": "^6.7.1",
-    "husky": "^0.11.9"
+    "husky": "^0.11.9",
+    "nodemon": "^1.11.0"
   },
   "dependencies": {
     "@matthewglover/hapi-wrapper": "^0.2.5",
